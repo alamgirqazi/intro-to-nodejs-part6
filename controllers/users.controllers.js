@@ -8,7 +8,8 @@ usersController.getAll = async (req, res) => {
   let users;
   try {
     let merged = {};
-
+    const start = 0;
+    const length = 100;
     users = await Users.paginate(
       merged,
       { password: 0 },
